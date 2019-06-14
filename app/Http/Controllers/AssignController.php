@@ -96,7 +96,7 @@ class AssignController extends Controller
      */
     public function show(Assign $assign)
     {
-        return view('assign.show');
+        return view('assign.show', compact('assign'));
     }
 
     /**
@@ -120,6 +120,25 @@ class AssignController extends Controller
     public function update(Request $request, Assign $assign)
     {
 
+    }
+
+    public function assignStatus(Request $request, Assign $assign)
+    {
+        // return $assign;
+        $assign->update([
+            'assign_status'=> $request->assign_status
+        ]);
+
+        return back()->withMessage('Assign Status Updated Succefully');
+    }
+
+    public function productStatus(Request $request, Assign $assign)
+    {
+        $assign->update([
+            'product_status'=> $request->product_status
+        ]);
+
+        return back()->withMessage1('Product Status Updated Succefully');
     }
 
     /**

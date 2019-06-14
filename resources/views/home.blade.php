@@ -229,7 +229,7 @@
                     {{-- {{print_r($requisition)}} --}}
                     <td>{{ $loop->index+1 }}</td>
                     <td>{{ $requisition->created_at->format('d-M-y') }}</td>
-                    <td>{{strtoupper($requisition->product->name)}}</td>
+                    <td>{{strtoupper($requisition->product->name)}} #{{($requisition->product->supplier->name)}}</td>
                     <td>{{ $requisition->quantity }}</td>
                     <td>{{ $requisition->user->name }}</td>
                     <td>

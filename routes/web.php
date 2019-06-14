@@ -105,6 +105,8 @@ Route::get('requisition/forward/{requisition}', 'HomeController@forward')->name(
 /////////////////// ASSIGN /////////////////////
 Route::resource('assign', 'AssignController');
 Route::post('/get/product/id', 'AssignController@getProductId');
+Route::post('/change/assign/status/{assign}', 'AssignController@assignStatus')->name('change.assign.status');
+Route::post('/change/product/status/{assign}', 'AssignController@productStatus')->name('change.product.status');
 Route::post('/get/product/name', 'AssignController@getProductName');
 
 /////////////////// PRODUCT WITH EMPLOYEE /////////////////////

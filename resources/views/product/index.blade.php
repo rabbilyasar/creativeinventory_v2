@@ -102,8 +102,8 @@
             <tr>
                 <td>{{ $loop->index+1 }}</td>
                 <td>{{$product->created_at}}</td>
-                <td>{{$product->supplier->name}}</td>
                 <td>{{$product->name}}</td>
+                <td>{{$product->supplier->name}}</td>
                 {{-- <td>
                     @if ($product->purchase_status == 1)
                         <a href="{{route('purchase.create', $product->id)}}" class="btn bg-light form-control">AVAILABLE</a>

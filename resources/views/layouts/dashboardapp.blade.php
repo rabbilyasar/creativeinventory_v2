@@ -314,12 +314,12 @@
                     <span class="lbl">&nbsp;<small>Add Product</small> </span>
                 </a>
             </li>
-            <li>
+            {{-- <li>
                 <a href="{{ route('assign.create') }}">
                     &nbsp;&nbsp;&nbsp; &nbsp;<i class="lbl fas fa-sort-amount-up"></i>
                     <span class="lbl">&nbsp;<small>Assign Product</small> </span>
                 </a>
-            </li>
+            </li> --}}
             <li>
                 <a href="{{ route('product.index') }}">
                     &nbsp;&nbsp;&nbsp; &nbsp;<i class="lbl fas fa-list"></i>

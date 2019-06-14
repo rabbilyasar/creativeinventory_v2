@@ -37,9 +37,9 @@
                     <td>{{strtoupper($assign->company->company_abbr)}}/{{strtoupper($assign->product->name)}}-{{$assign->unique_id}}</td>
                     <td>
                         @if ($assign->assign_status == 1)
-                            <div class="btn btn-success form-control" disabled>AVAILABLE</div>
+                            <a href="{{route('assign.show', $assign->id)}}" class="btn btn-success form-control" >AVAILABLE</a>
                         @elseif ($assign->assign_status == 2)
-                            <a href="{{route('assign.show', $assign->id)}}" class="btn btn-danger form-control">OCCUPIED</a>
+                            <a href="{{route('assign.show', $assign->id)}}" class="btn btn-danger form-control" >OCCUPIED</a>
                         @endif
                     </td>
                     {{-- <td>{{$assign->employee_has_product->user->name}}</td> --}}

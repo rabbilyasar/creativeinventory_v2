@@ -32,8 +32,8 @@
                 @forelse($assigns as $assign)
                 <tr>
                     <td>{{ $loop->index+1 }}</td>
-                    <td>{{$assign->created_at->format('d-m-y')}}</td>
-                    <td>{{strtoupper($assign->assign->product->name)}}</td>
+                    <td>{{$assign->created_at}}</td>
+                    <td>{{strtoupper($assign->assign->company->company_abbr)}}/{{strtoupper($assign->assign->product->name)}}-{{$assign->assign->unique_id}}</td>
                     <td>{{$assign->user->name}}</td>
                     {{-- <td>{{$assign->assign->}}</td> --}}
                 </tr>
