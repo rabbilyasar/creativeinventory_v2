@@ -28,7 +28,7 @@
                     </div>
                     @endif
                 <h2 class="text-center"> <strong>CHANGE REQUISITION STATUS</strong> </h2>
-                <h4 class="mb-5 text-center">Current status: <span class=" error">dfljdf</span></h4>
+                <h4 class="mb-5 text-center">Current status: <span class=" error">{{$assign->assign_status}}</span></h4>
                 <form action="{{route('change.assign.status', $assign->id)}}" method="POST">
                     <select name="assign_status" id="" class="form-control">
                         <option value="">-- Select Status --</option>
@@ -51,7 +51,7 @@
                     </div>
                     @endif
                 <h2 class="text-center"> <strong>CHANGE PRODUCT STATUS</strong> </h2>
-                <h4 class="mb-5 text-center">Current status: <span class=" error">dfljdf</span></h4>
+                <h4 class="mb-5 text-center">Current status: <span class=" error">{{$assign->product_status}}</span></h4>
                 <form action="{{route('change.product.status', $assign->id)}}" method="POST">
                     <select name="product_status" id="" class="form-control">
                         <option value="">-- Select Status --</option>
