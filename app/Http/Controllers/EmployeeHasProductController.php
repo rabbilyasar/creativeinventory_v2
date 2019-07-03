@@ -10,6 +10,7 @@ use Carbon\Carbon;
 
 class EmployeeHasProductController extends Controller
 {
+    
     /**
      * Display a listing of the resource.
      *

@@ -23,7 +23,7 @@
                 <thead>
                 <tr>
                     <th>#</th>
-                    <th>Created at</th>
+                    <th>Assigned at</th>
                     <th>Product Name</th>
                     <th>Employee Name</th>
                 </tr>

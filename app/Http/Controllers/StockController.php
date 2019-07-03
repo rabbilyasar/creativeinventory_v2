@@ -23,7 +23,18 @@ class StockController extends Controller
     public function index()
     {
 
-        $stocks = Stock::orderBy('created_at', 'desc')->get();
+
+        $reusableProducts = Product::join('stocks', 'products.id', '=', 'stocks.product_id')->where('category_status', 2)->get();
+        $usableProducts = Product::join('stocks', 'products.id', '=', 'stocks.product_id')->where('category_status', 1)->get();
+
+
+        // return $reusableProducts;
+        // foreach ($stocksData as $stock) {
+          
+        //       $reusableProducts = Product::where('id', $stock->id)->get();# code...
+        // } 
+
+        // return $reusableProducts;
         
         // $stocks->groupBy(function($item, $key){
         //     return $item['quantity'];
@@ -34,7 +45,7 @@ class StockController extends Controller
         //     return $y;
         // }
 
-        return view('stock.index', compact('stocks'));
+        return view('stock.index', compact('reusableProducts', 'usableProducts'));
     }
 
     /**

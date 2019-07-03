@@ -58,6 +58,7 @@
                             <label for="remember">Keep me signed in</label>
                         </div>
                     </div>
+                    <a class="pb-2" href="{{url('/password/reset')}}"><small>Reset Password</small></a>
                     <button type="submit" class="btn btn-rounded">Sign in</button>
                 </form>
             </div>
