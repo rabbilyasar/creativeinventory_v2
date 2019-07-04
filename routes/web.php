@@ -112,3 +112,7 @@ Route::post('/get/product/name', 'AssignController@getProductName');
 /////////////////// PRODUCT WITH EMPLOYEE /////////////////////
 Route::resource('employee_product', 'EmployeeHasProductController');
 
+
+/////////////////// PRODUCT WITH EMPLOYEE /////////////////////
+Route::resource('category', 'CategoryController');
+
