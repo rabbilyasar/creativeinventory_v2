@@ -146,6 +146,26 @@
             <span class="lbl">Supplier</span>
         </a>
     </li>
+    <li class="red with-sub">
+        <span class="">
+            <i class="font-icon fas fa-th-large @yield('active-category')"></i>
+            <span class="lbl">Category</span>
+        </span>
+        <ul>
+            <li>
+                <a href="{{ route('category.index') }}">
+                    &nbsp;&nbsp;&nbsp; &nbsp;<i class="lbl fas fa-plus-circle"></i>
+                    <span class="lbl">&nbsp;<small>Add Category</small> </span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('category.sortView') }}">
+                    &nbsp;&nbsp;&nbsp; &nbsp;<i class="lbl fas fa-list"></i>
+                    <span class="lbl">&nbsp;<small>Sort Category</small> </span>
+                </a>
+            </li>
+        </ul>
+    </li>
 
     <li class="purple with-sub">
         <span class="">
@@ -179,6 +199,7 @@
             </li> --}}
         </ul>
     </li>
+
 
     <li class="red with-sub">
         <span class="">

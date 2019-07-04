@@ -115,4 +115,8 @@ Route::resource('employee_product', 'EmployeeHasProductController');
 
 /////////////////// PRODUCT WITH EMPLOYEE /////////////////////
 Route::resource('category', 'CategoryController');
+Route::get('category/restore/{category}', 'CategoryController@restore')->name('category.restore');
+Route::get('category/force/delete/{category}', 'CategoryController@forceDelete')->name('category.forceDelete');
+Route::post('category/sort', 'CategoryController@sort')->name('category.sort');
+Route::get('category/sort/view', 'CategoryController@sortView')->name('category.sortView');
 

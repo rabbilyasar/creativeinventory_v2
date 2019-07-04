@@ -36,7 +36,7 @@
                         {{ session('delete') }}
                     </div>
                   @endif
-{{------------- START DEPARTMENT LIST TABLE ----------------}}
+{{------------- START CATEGORY LIST TABLE ----------------}}
                 <table class="table table-bordered" id="cat_list">
                   <thead>
                     <tr>
@@ -162,17 +162,18 @@
                     </div>
                 @endif
 {{---------- FORM TO ADD INPUT ------------}}
-                <form action="{{ route('department.store') }}" method="post">
+                <form action="{{ route('category.store') }}" method="post">
                 @csrf
                     <div class="form-group">
                       <label>Category Name</label>
-                      <input type="text" class="form-control" name="name" placeholder="Enter department Name" value="{{ old('name') }}">
+                      <input type="text" class="form-control" name="name" placeholder="Enter Category Name" value="{{ old('name') }}">
                     </div>
                     <button type="submit" class="btn btn-success">Add Category</button>
                 </form>
             </div>
         </div>
     </div>
+
 </div>
 @endsection
 @section('footer_scripts')
